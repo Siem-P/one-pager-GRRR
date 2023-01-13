@@ -34,9 +34,30 @@ html {
 body {
     font: 100%, 1/4, sans-serif;
     background-color: var(--primary-color);
+    color: white;
 }
+h1 {
+    color: var(--secondary-color);
+}
+
+h2 {
+    padding-left: 1em;
+    padding-top: 1em;
+}
+article {
+    background: var(--secondary-color);
+}
+
+article ol{
+    padding: 1em;
+}
+
+
+
 
 article p{
     max-width: 20em;
+    padding: 1em;
+    
 }
 
