@@ -1,0 +1,42 @@
+/* Custom properties */
+:root {
+    --primary-color: #E0FF64;
+    --secondary-color: #1F1F20;
+}
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Font declaration */
+/* @font-face {
+    font-family: '';
+    src: url(../assets/fonts);
+    font-weight: ;
+} */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 100%, 1/4, sans-serif;
+    background-color: var(--primary-color);
+}
+
+article p{
+    max-width: 20em;
+}
+
