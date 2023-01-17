@@ -1,7 +1,13 @@
 /* Custom properties */
 :root {
-    --primary-color: #E0FF64;
-    --secondary-color: #1F1F20;
+    --black: black;
+    --blue: #5145FF;
+    --beige: #FFEDDC;
+    --gray99: #3C3B34;
+    /* --neon-green: #A5FE13; */
+    --neon-green: #E1FF62;
+    --font-title: 1.7em hk-heavy, 'sans-serif';
+    --font-default: hk-regular, 'sans-serif';
 }
 
 /* CSS reset */
@@ -21,6 +27,7 @@ a {
 
 h1 {
     color: var(--secondary-color);
+    /* font: var(--font-title); */
 }
 
 h2 {
@@ -28,11 +35,16 @@ h2 {
 }
 
 /* Font declaration */
-/* @font-face {
-    font-family: '';
-    src: url(../assets/fonts);
-    font-weight: ;
-} */
+@font-face {
+    font-family: 'hk-heavy';
+    src: url(../assets/fonts/Fontspring-DEMO-herokid-heavyexpanded.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'hk-regular';
+    src: url(../assets/fonts/Fontspring-DEMO-herokid-regularexpanded.otf);
+    font-weight: 500;
+}
 
 
 html {
@@ -40,11 +52,96 @@ html {
 }
 
 body {
-    font: 100%, 1/4, sans-serif;
+    font: var(--font-default);
     background-color: var(--primary-color);
-    color: white;
+    color: var(--black);
 }
+/* ----------------- */
+/* Hero Section */
+/* ----------------- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--gray99);
+    color: var(--neon-green);
+    width: 100vw;
+    height: 20em;
+ }
 
+ /* Span  */
+ .company-name {
+    position: absolute;
+    top: 3.5em;
+    left: -1.5em;
+    vertical-align: middle;
+    font-weight: bolder;
+    background-color: var(--neon-green);
+    color: var(--gray99);
+    padding: 0.2em 0.8em;
+    transform: rotate(-90deg);
+    
+ }
+
+ /* Hero Intro Heading Level 1 */
+ .hero-intro h1 {
+    font-size: x-large;
+    padding-bottom: 2em;
+ }
+
+ /* Hero Apply Button */
+ .hero .call-to-action {
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+ }
+
+ .hero .call-to-action::after {
+    content: "Deadline: Febuary 24th";
+    font-style: oblique;
+    font-weight: 100;
+    font-size: small;
+    padding-top: 1em;
+ }
+
+ .call-to-action .apply-button {
+    padding: 1em 1em;
+    background-color: var(--neon-green);
+    border: none;
+    color: var(--black);
+    transition: ease 250ms;
+ }
+
+ .call-to-action a:hover {
+    transform: translateY(-2px);
+    background: var(--black);
+    color: var(--neon-green);
+    transition: transform 250ms ease-in-out;
+
+ }
+
+ /* Yellow banner - Five zero zero zero zero */
+
+ .advertisement-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5.6em;
+    font-weight: bolder;
+    color: var(--black);
+    background-color: var(--neon-green);
+    width: 100%;
+    /* padding: 0.3em; */
+    height: fit-content;
+ }
+
+ .advertisement-section .five-zero {
+    text-align: center;
+ }
+
+
+ /* Main content */
 article {
     background: var(--secondary-color);
     padding: 1em;
