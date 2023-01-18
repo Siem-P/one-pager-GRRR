@@ -64,7 +64,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--gray99);
+    background: var(--black);
     color: var(--neon-green);
     width: 100vw;
     height: 20em;
@@ -86,23 +86,26 @@ body {
 
  /* Hero Intro Heading Level 1 */
  .hero-intro h1 {
-    font-size: x-large;
-    padding-bottom: 2em;
+    max-width: 6em;
+    font-size: 3em;
+    padding: 1em;
+    
  }
 
  /* Hero Apply Button */
  .hero .call-to-action {
     font-weight: bolder;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
  }
 
- .hero .call-to-action::after {
-    content: "Deadline: Febuary 24th";
+ .hero .call-to-action span {
+    display: flex;
+    align-items: center;
     font-style: oblique;
-    font-weight: 100;
-    font-size: small;
-    padding-top: 1em;
+    /* font-weight: 100; */
+    /* font-size: small; */
+    margin-left: 1em;
  }
 
  .call-to-action .apply-button {
