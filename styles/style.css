@@ -3,11 +3,32 @@
   --black: black;
   --blue: #5145ff;
   --beige: #ffeddc;
+  --white: #fff;
   --gray99: #3c3b34;
   --neon-green: #A5FE13; 
-  /* --neon-green: #e1ff62; */
-  --font-title: 'hk-heavy', Fallback "sans-serif";
-  --font-default: 'hk-regular', Fallback, sans-serif;
+  --neon-yellow: #e1ff62;
+
+  --font-title: 'hk-heavy', Fallback, sans-serif;
+  --font-default: 'nhd-light', Fallback, sans-serif;
+}
+
+/* Font declaration */
+@font-face {
+  font-family: "hk-heavy";
+  src: url(assets/fonts/herokid/Fontspring-DEMO-herokid-heavyexpanded.otf) format('otf');
+  font-weight: 900; 
+}
+
+@font-face {
+  font-family: "hk-regular";
+  src: url(assets/fonts/herokid/Fontspring-DEMO-herokid-regularexpanded.otf) format('otf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "nhd-light";
+  src: url(assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf) format('ttf');
+  font-weight: 500;
 }
 
 /* CSS reset */
@@ -26,7 +47,8 @@ a {
   text-decoration: none;
 }
 
-h1 {
+
+h1, h2 {
   color: var(--secondary-color);
   font-family: var(--font-title);
 }
@@ -35,18 +57,7 @@ h2 {
   padding-bottom: 0.5em;
 }
 
-/* Font declaration */
-@font-face {
-  font-family: "hk-heavy";
-  src: url(assets/fonts/Fontspring-DEMO-herokid-heavyexpanded.otf) format('otf');
-  font-weight: 900; 
-}
 
-@font-face {
-  font-family: "hk-regular";
-  src: url(assets/fonts/Fontspring-DEMO-herokid-regularexpanded.otf) format('otf');
-  font-weight: 500;
-}
 
 html {
   scroll-behavior: smooth;
@@ -91,7 +102,12 @@ body {
   max-width: 6.5em;
   font-size: 3em;
   padding-bottom: 1em;
-  padding-left: 0.3em;
+  padding-left: 0.7em;
+}
+
+.hero-intro span {
+  font-size: 2em;
+  /* line-height: 0%; */
 }
 
 /* Hero Apply Button */
@@ -129,7 +145,7 @@ body {
 
 /* Yellow banner - Five zero zero zero zero */
 
-.advertisement-section {
+.five-zero-section {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -145,9 +161,37 @@ body {
   /* overflow-y: auto; */
 }
 
-.advertisement-section .five-zero {
+.five-zero-section .five-zero {
   display: flex;
   transform: translateX(-350px);
+}
+
+/* Part after the Neon Green banner */
+/* Hero intro paragraph */
+
+.hero-intro-text {
+  /* padding: 1.5em; */
+  background-color: var(--blue);
+  color: var(--white);
+  font-weight: 500;
+  font-size: large;
+}
+
+.hero-intro-text .hero-intro-text-p {
+  
+  padding: 1.5em 1em;
+}
+
+.hero-intro-text .hero-intro-image {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: flex-end; */
+}
+
+.hero-intro-text .hero-intro-image img {
+  /* object-fit: cover; */
+  /* aspect-ratio: 1/1; */
+  width: 100%;
 }
 
 /* Main content */
