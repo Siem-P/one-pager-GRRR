@@ -2,8 +2,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 // Company name - Landing Page
-gsap.to(".company-name", {
-    top: 56,
+gsap.from(".company-name", {
+    yPercent: -110,
     ease: Power3.easeOut,
     duration: 2
 });
@@ -24,7 +24,7 @@ gsap.to(".company-name", {
 // })
 
 // Five-Zero's
-gsap.to(".five-zero-section > span", {
+gsap.from(".five-zero-section > span", {
     scrollTrigger: {
         trigger: ".five-zero-section",
         start: "top 70%",
@@ -34,7 +34,22 @@ gsap.to(".five-zero-section > span", {
         toggleActions: "play none none pause"
     },
     stagger: 0.2,
-    x: 0,
+    x: -350,
     duration: 0.7,
     ease: Circ.easeOut
 });
+
+
+// GRRR Portfolio right to left animation 
+gsap.from("#whos-behind-this-article .portfolio-image", {
+    scrollTrigger: {
+        trigger: "#whos-behind-this-article",
+        start: "top 30%",
+        end: "bottom 80%",
+        // markers: true,
+        toggleActions: "play none none pause",
+    },
+    x: 500,
+    duration: 1,
+    ease: Power3.easeOut
+})

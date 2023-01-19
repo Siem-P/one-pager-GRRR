@@ -5,30 +5,33 @@
   --beige: #ffeddc;
   --white: #fff;
   --gray99: #3c3b34;
-  --neon-green: #A5FE13; 
+  --neon-green: #a5fe13;
   --neon-yellow: #e1ff62;
 
-  --font-title: 'hk-heavy', Fallback, sans-serif;
-  --font-default: 'nhd-light', Fallback, sans-serif;
+  --font-title: "hk-heavy", Fallback, sans-serif;
+  --font-default: "nhd-light", Fallback, sans-serif;
 }
 
 /* Font declaration */
 @font-face {
   font-family: "hk-heavy";
-  src: url(assets/fonts/herokid/Fontspring-DEMO-herokid-heavyexpanded.otf) format('otf');
-  font-weight: 900; 
+  src: url(assets/fonts/herokid/Fontspring-DEMO-herokid-heavyexpanded.otf)
+    format("otf");
+  font-weight: 900;
 }
 
 @font-face {
   font-family: "hk-regular";
-  src: url(assets/fonts/herokid/Fontspring-DEMO-herokid-regularexpanded.otf) format('otf');
-  font-weight: 500;
+  src: url(assets/fonts/herokid/Fontspring-DEMO-herokid-regularexpanded.otf)
+    format("otf");
+  font-weight: 00;
 }
 
 @font-face {
   font-family: "nhd-light";
-  src: url(assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf) format('ttf');
-  font-weight: 500;
+  src: url(assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf)
+    format("ttf");
+  font-weight: 00;
 }
 
 /* CSS reset */
@@ -47,8 +50,8 @@ a {
   text-decoration: none;
 }
 
-
-h1, h2 {
+h1,
+h2 {
   color: var(--secondary-color);
   font-family: var(--font-title);
 }
@@ -56,8 +59,6 @@ h1, h2 {
 h2 {
   padding-bottom: 0.5em;
 }
-
-
 
 html {
   scroll-behavior: smooth;
@@ -67,7 +68,11 @@ body {
   font-family: var(--font-default);
   background-color: var(--primary-color);
   color: var(--black);
+  max-width: 30em;
+  line-height: 1.4;
+  font-weight: 500;
 }
+
 /* ----------------- */
 /* Hero Section */
 /* ----------------- */
@@ -87,7 +92,7 @@ body {
 /* Span  */
 .company-name {
   position: absolute;
-  top: -10em;
+  top: 5em;
   left: -1.5em;
   vertical-align: middle;
   font-weight: bolder;
@@ -150,7 +155,7 @@ body {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  font-size: 5.6em;
+  font-size: 6em;
   font-weight: bolder;
   color: var(--black);
   background-color: var(--neon-green);
@@ -163,7 +168,7 @@ body {
 
 .five-zero-section .five-zero {
   display: flex;
-  transform: translateX(-350px);
+  /* transform: translateX(-px); */
 }
 
 /* Part after the Neon Green banner */
@@ -173,12 +178,11 @@ body {
   /* padding: 1.5em; */
   background-color: var(--blue);
   color: var(--white);
-  font-weight: 500;
+  
   font-size: large;
 }
 
 .hero-intro-text .hero-intro-text-p {
-  
   padding: 1.5em 1em;
 }
 
@@ -195,9 +199,23 @@ body {
 }
 
 /* Main content */
-article {
-  background: var(--secondary-color);
-  padding: 1em;
+
+article,section  {
+  width: 100%;
+  background: var(--beige);
+  padding: 1em;  
+}
+
+main > article h2 {
+  padding-top: 1em;
+}
+
+main > article .first-word {
+  padding: 0.2em 0.5em;
+  margin-bottom: 1em;
+  background-color: var(--white);
+  border: 0.1em solid var(--black);
+  font-size: 2em;
 }
 
 article ol,
@@ -205,6 +223,24 @@ ul {
   padding: 1em 0em;
 }
 
-article p {
-  max-width: 25em;
+article,
+section p {
+  
+}
+
+#whos-behind-this-article > .portfolio-image {
+  margin-top: 1em;
+  z-index: 3;
+  background: url(/assets/images/GRRR-portfolio.png);
+  background-size: cover;
+  background-position: 50%;
+  /* object-fit: cover; */
+  aspect-ratio: 1/1;
+  width: 100%;
+}
+
+#whos-behind-this-article p {
+
+  /* background-color: #3c3b34ce; */
+  /* color: var(--beige); */
 }
