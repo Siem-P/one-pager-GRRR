@@ -3,9 +3,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Company name - Landing Page
 gsap.from(".company-name", {
-    yPercent: -110,
+    y: -200,
+    delay: 2,
     ease: Power3.easeOut,
-    duration: 2
+    duration: 2,
+    
 });
 
 
