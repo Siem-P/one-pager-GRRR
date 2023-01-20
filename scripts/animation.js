@@ -8,6 +8,14 @@ gsap.from(".company-name", {
     duration: 2
 });
 
+
+// H1 - Landing view 
+gsap.from(".hero-intro h1", {
+    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+    duration: 1.2,
+    delay: .5,
+});
+
 // 
 // gsap.to(".company-name", {
 //     scrollTrigger: {
@@ -34,7 +42,7 @@ gsap.from(".five-zero-section > span", {
         toggleActions: "play none none pause"
     },
     stagger: 0.2,
-    x: -350,
+    x: -1000,
     duration: 0.7,
     ease: Circ.easeOut
 });
@@ -44,12 +52,12 @@ gsap.from(".five-zero-section > span", {
 gsap.from("#whos-behind-this-article .portfolio-image", {
     scrollTrigger: {
         trigger: "#whos-behind-this-article",
-        start: "top 30%",
+        start: "center 40%",
         end: "bottom 80%",
-        // markers: true,
+        markers: true,
         toggleActions: "play none none pause",
     },
     x: 500,
     duration: 1,
-    ease: Power3.easeOut
+    ease: Power2.easeOut
 })

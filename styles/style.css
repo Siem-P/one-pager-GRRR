@@ -36,6 +36,7 @@
 
 /* CSS reset */
 * {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -65,10 +66,10 @@ html {
 }
 
 body {
+  width: 100%;
   font-family: var(--font-default);
   background-color: var(--primary-color);
   color: var(--black);
-  max-width: 30em;
   line-height: 1.4;
   font-weight: 500;
 }
@@ -104,6 +105,7 @@ body {
 
 /* Hero Intro Heading Level 1 */
 .hero-intro h1 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   max-width: 6.5em;
   font-size: 3em;
   padding-bottom: 1em;
@@ -160,15 +162,13 @@ body {
   color: var(--black);
   background-color: var(--neon-green);
   width: 100%;
-  max-width: 5em;
-  /* padding: 0.3em; */
   height: fit-content;
-  /* overflow-y: auto; */
+  padding: 0;
 }
 
 .five-zero-section .five-zero {
   display: flex;
-  /* transform: translateX(-px); */
+  max-width: 6em;
 }
 
 /* Part after the Neon Green banner */
@@ -176,9 +176,8 @@ body {
 
 .hero-intro-text {
   /* padding: 1.5em; */
-  background-color: var(--blue);
+  background-color: var(--black);
   color: var(--white);
-  
   font-size: large;
 }
 
@@ -200,10 +199,10 @@ body {
 
 /* Main content */
 
-article,section  {
-  width: 100%;
+article,
+section {
   background: var(--beige);
-  padding: 1em;  
+  padding: 1em;
 }
 
 main > article h2 {
@@ -225,7 +224,7 @@ ul {
 
 article,
 section p {
-  
+  max-width: 30em;
 }
 
 #whos-behind-this-article > .portfolio-image {
@@ -240,7 +239,6 @@ section p {
 }
 
 #whos-behind-this-article p {
-
   /* background-color: #3c3b34ce; */
   /* color: var(--beige); */
 }
