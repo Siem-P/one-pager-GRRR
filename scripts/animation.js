@@ -54,7 +54,7 @@ gsap.from("#whos-behind-this-article .portfolio-image", {
         trigger: "#whos-behind-this-article",
         start: "center 40%",
         end: "bottom 80%",
-        markers: true,
+        // markers: true,
         toggleActions: "play none none pause",
     },
     x: 500,
